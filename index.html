@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Astrion Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Astrion Shop</h1>
+        <div class="platform-buttons">
+            <button id="tiktokBtn" class="btn">TikTok</button>
+            <button id="shopeeBtn" class="btn">Shopee</button>
+        </div>
+        <div id="platform-name" class="platform-name">TikTok</div>
+    </header>
+
+    <div class="category-buttons">
+        <button class="category-btn" onclick="filterCategory('For You')">For You</button>
+        <button class="category-btn" onclick="filterCategory('Pants')">Pants</button>
+        <button class="category-btn" onclick="filterCategory('Shirts')">Shirts</button>
+        <button class="category-btn" onclick="filterCategory('Croptops')">Croptops</button>
+    </div>
+
+    <div id="products-container" class="products-container">
+        <!-- Products will be dynamically loaded here -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Astrion Shop. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#">FB</a>
+            <a href="#">IG</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

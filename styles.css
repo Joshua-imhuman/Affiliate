@@ -1,0 +1,244 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E4E0E1; /* light greyish pink */
+    color: #333; /* dark text color */
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #AB886D; /* light brown */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .platform-buttons .btn {
+    padding: 12px 25px;
+    background-color: #AB886D; /* light brown */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .platform-buttons .btn:hover {
+    background-color: #493628; /* dark brown */
+}
+
+/* Platform name styling */
+header .platform-name {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Active state for buttons */
+header .platform-buttons .btn.active {
+    background-color: #493628; /* dark brown */
+}
+
+/* Category button styles */
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.category-btn {
+    padding: 12px 20px;
+    background-color: #D6C0B3; /* light beige */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #AB886D; /* light brown hover */
+}
+
+/* Container for products */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Product card styles */
+.product-card {
+    background-color: #FFFFFF; /* white background */
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Align children in a column */
+    height: 100%; /* Allow the card to stretch vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image styles */
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Content section within the product card */
+.product-card .content {
+    flex-grow: 1; /* This will push the button to the bottom */
+    padding: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: #493628; /* Dark brown for price */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Buy button styles */
+.product-card .btn-buy {
+    padding: 12px 20px;
+    background-color: #AB886D; /* light brown */
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded edges */
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize the text */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    text-align: center;
+    margin-top: auto; /* Ensures the button is at the bottom */
+}
+
+/* Hover effect for the "Buy" button */
+.product-card .btn-buy:hover {
+    background-color: #493628; /* dark brown on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Active effect for the "Buy" button */
+.product-card .btn-buy:active {
+    background-color: #D6C0B3; /* light beige when active */
+    transform: translateY(2px); /* Pressed down effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow on active */
+}
+
+/* Footer styles */
+footer {
+    background-color: #AB886D; /* light brown footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer .social-icons a:hover {
+    color: #493628; /* Dark brown hover effect for icons */
+}
+
+/* Media Queries for responsiveness */
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .category-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .category-buttons {
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 320px; /* Max width for better fitting on smaller screens */
+    }
+
+    .products-container {
+        padding: 0 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media screen and (max-width: 480px) {
+    header .platform-buttons .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .category-btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    footer .social-icons a {
+        font-size: 1rem;
+    }
+}
